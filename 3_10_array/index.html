@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>template</title>
+<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+<div class="header-contents">
+<h1>제목</h1>
+<h2>부제목</h2>
+</div><!-- /.header-contents -->
+</header>
+<div class="main-wrapper">
+<section>
+	<h1>해야 할 일 목록</h1>
+	<ul id="list">
+	</ul>
+</section>
+</div><!-- /.main-wrapper -->
+<footer>JavaScript Samples</footer>
+<script>
+var todo = ['디자인 샘플 작성','데이터 정리','스터디 신청','우유 사기'];
+todo.push('치과 가기');
+
+console.log(todo);
+
+for(var i=0;i<todo.length;i++)
+{
+	// 변수 li 를 생성하고, 'li' 태그를 li 변수에 대입한다.
+	var li=document.createElement('li');
+	// 변수 li에 대입한 <li></li> 콘텐츠에 todo의 데이터를 대입한다.
+	li.textContent = todo[i];
+	// <li></li> 를 <ul id="list"> 에 자식 요소로 삽입한다.
+	// todo 데이터를 담은 li 를 <ul id="list">에 삽입한다.
+	document.getElementById('list').appendChild(li);
+}
+</script>
+</body>
+</html>
